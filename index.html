@@ -95,10 +95,8 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      background: linear-gradient(135deg, #0A0A23, #1E3A8A),
-                  url('https://via.placeholder.com/1920x1080/0A0A23/1E3A8A?text=AI+Network') center/cover no-repeat;
-      background-size: 200% 200%, cover;
-      background-blend-mode: overlay;
+      background: linear-gradient(135deg, #0A0A23, #1E3A8A, #00CED1);
+      background-size: 200% 200%;
       animation: gradient 15s ease infinite;
       padding: 0 3rem;
       position: relative;
@@ -112,7 +110,9 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(10, 10, 35, 0.7);
+      background: url('https://via.placeholder.com/1920x1080') center/cover no-repeat; /* Reemplaza con la URL de tu imagen */
+      opacity: 0.3;
+      filter: hue-rotate(180deg);
       z-index: 0;
     }
 
@@ -120,7 +120,7 @@
     .slider {
       position: relative;
       width: 100%;
-      max-width: 1000px;
+      max-width: 900px;
       margin-bottom: 2rem;
       overflow: hidden;
       border-radius: 12px;
@@ -138,34 +138,19 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 3rem;
+      padding: 2rem;
       background: rgba(30, 58, 138, 0.3);
-      background-size: cover;
-      background-position: center;
-    }
-
-    .slide:nth-child(1) {
-      background-image: url('https://via.placeholder.com/1000x400/0A0A23/1E3A8A?text=AI+Visualization');
-    }
-
-    .slide:nth-child(2) {
-      background-image: url('https://via.placeholder.com/1000x400/0A0A23/1E3A8A?text=IT+Network');
-    }
-
-    .slide:nth-child(3) {
-      background-image: url('https://via.placeholder.com/1000x400/0A0A23/1E3A8A?text=OT+Machinery');
     }
 
     .slide h2 {
-      font-size: 2.8rem;
-      font-weight: 400;
+      font-size: 2.5rem;
+      font-weight: 300;
       color: #FFFFFF;
       margin-bottom: 1rem;
-      text-shadow: 0 0 5px rgba(0, 191, 255, 0.3);
     }
 
     .slide p {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       font-weight: 200;
       color: #D0D0FF;
       max-width: 600px;
@@ -196,11 +181,11 @@
       background-color: transparent;
       border: 2px solid #00BFFF;
       color: #00BFFF;
-      padding: 1rem 3rem;
+      padding: 1rem 2.5rem;
       border-radius: 50px;
       text-decoration: none;
       font-weight: 400;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       transition: all 0.3s;
       position: relative;
       overflow: hidden;
@@ -258,19 +243,31 @@
     /* Sección Acerca de Nosotros */
     #acerca {
       padding: 10rem 3rem;
-      background: linear-gradient(135deg, #1E3A8A, #0A0A23),
-                  url('https://via.placeholder.com/1920x1080/1E3A8A/0A0A23?text=Tech+Lines') center/cover no-repeat;
-      background-blend-mode: overlay;
+      background: linear-gradient(135deg, #1E3A8A, #0A0A23);
       text-align: center;
       position: relative;
     }
 
+    #acerca::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://via.placeholder.com/1920x1080/1E3A8A/0A0A23?text=Tech+Lines') center/cover no-repeat;
+      opacity: 0.1;
+      z-index: 0;
+    }
+
     #acerca h2 {
-      font-size: 3rem;
-      font-weight: 400;
+      font-size: 2.8rem;
+      font-weight: 300;
       color: #FFFFFF;
       margin-bottom: 2.5rem;
       animation: fadeIn 1s ease-in;
+      position: relative;
+      z-index: 1;
     }
 
     #acerca p {
@@ -279,19 +276,21 @@
       margin: 0 auto 3rem;
       color: #D0D0FF;
       animation: fadeIn 1.5s ease-in;
+      position: relative;
+      z-index: 1;
     }
 
     #acerca .valores-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 3rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
       max-width: 1200px;
       margin: 0 auto;
     }
 
     #acerca .valor {
       background-color: rgba(10, 10, 35, 0.8);
-      padding: 2.5rem;
+      padding: 2rem;
       border-radius: 12px;
       transition: transform 0.3s;
       opacity: 0;
@@ -320,32 +319,44 @@
     /* Sección Servicios */
     #servicios {
       padding: 10rem 3rem;
-      background: linear-gradient(135deg, #0A0A23, #1E3A8A),
-                  url('https://via.placeholder.com/1920x1080/0A0A23/1E3A8A?text=Tech+Nodes') center/cover no-repeat;
-      background-blend-mode: overlay;
+      background: linear-gradient(135deg, #0A0A23, #1E3A8A);
       position: relative;
     }
 
+    #servicios::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://via.placeholder.com/1920x1080/0A0A23/1E3A8A?text=Tech+Nodes') center/cover no-repeat;
+      opacity: 0.1;
+      z-index: 0;
+    }
+
     #servicios h2 {
-      font-size: 3rem;
-      font-weight: 400;
+      font-size: 2.8rem;
+      font-weight: 300;
       color: #FFFFFF;
       text-align: center;
       margin-bottom: 2.5rem;
       animation: fadeIn 1s ease-in;
+      position: relative;
+      z-index: 1;
     }
 
     .servicios-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 3rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
       max-width: 1200px;
       margin: 0 auto;
     }
 
     .servicio {
       background-color: rgba(30, 58, 138, 0.8);
-      padding: 2.5rem;
+      padding: 2rem;
       border-radius: 12px;
       text-align: center;
       transition: transform 0.3s;
@@ -353,25 +364,23 @@
       animation: fadeIn 1s ease-in forwards;
       background-size: cover;
       background-position: center;
+      position: relative;
+      min-height: 200px;
     }
 
     .servicio:nth-child(1) {
-      background-image: url('https://via.placeholder.com/300x400/0A0A23/1E3A8A?text=Ciberseguridad');
+      background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=260&q=80'); /* Ciberseguridad */
       animation-delay: 0.2s;
     }
 
     .servicio:nth-child(2) {
-      background-image: url('https://via.placeholder.com/300x400/0A0A23/1E3A8A?text=AI+Implementation');
+      background-image: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=260&q=80'); /* AI */
       animation-delay: 0.4s;
     }
 
     .servicio:nth-child(3) {
-      background-image: url('https://via.placeholder.com/300x400/0A0A23/1E3A8A?text=IT+Infrastructure');
+      background-image: url('https://images.unsplash.com/photo-1516321310764-8a238815d59c?ixlib=rb-4.0.3&auto=format&fit=crop&w=260&q=80'); /* IT */
       animation-delay: 0.6s;
-    }
-
-    .servicio:hover {
-      transform: translateY(-10px);
     }
 
     .servicio::before {
@@ -381,7 +390,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(10, 10, 35, 0.7);
+      background: rgba(10, 10, 35, 0.8);
       border-radius: 12px;
       z-index: 0;
     }
@@ -394,135 +403,136 @@
 
     .servicio h3 {
       color: #00BFFF;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
       font-weight: 400;
+      font-size: 1.3rem;
     }
 
     .servicio p {
       color: #D0D0FF;
       font-weight: 200;
+      font-size: 0.9rem;
+    }
+
+    .servicio:hover {
+      transform: translateY(-10px);
     }
 
     /* Sección Proyectos */
     #proyectos {
       padding: 10rem 3rem;
-      background: linear-gradient(135deg, #1E3A8A, #0A0A23),
-                  url('https://via.placeholder.com/1920x1080/1E3A8A/0A0A23?text=Tech+Flow') center/cover no-repeat;
-      background-blend-mode: overlay;
+      background: linear-gradient(135deg, #1E3A8A, #0A0A23);
       position: relative;
     }
 
-    #proyectos h2 {
-      font-size: 3rem;
-      font-weight: 400;
-      color: #FFFFFF;
-      text-align: center;
-      margin-bottom: 2.5rem;
-      animation: fadeIn 1s ease-in;
-    }
-
-    .proyectos-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 3rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .proyecto {
-      background-color: rgba(10, 10, 35, 0.8);
-      padding: 2.5rem;
-      border-radius: 12px;
-      text-align: center;
-      transition: transform 0.3s;
-      opacity: 0;
-      animation: fadeIn 1s ease-in forwards;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .proyecto:nth-child(1) {
-      background-image: url('https://via.placeholder.com/300x400/0A0A23/1E3A8A?text=Ciberseguridad+Industrial');
-      animation-delay: 0.2s;
-    }
-
-    .proyecto:nth-child(2) {
-      background-image: url('https://via.placeholder.com/300x400/0A0A23/1E3A8A?text=AI+Automation');
-      animation-delay: 0.4s;
-    }
-
-    .proyecto:nth-child(3) {
-      background-image: url('https://via.placeholder.com/300x400/0A0A23/1E3A8A?text=OT+IT+Integration');
-      animation-delay: 0.6s;
-    }
-
-    .proyecto:hover {
-      transform: translateY(-10px);
-    }
-
-    .proyecto::before {
+    #proyectos::before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(10, 10, 35, 0.7);
-      border-radius: 12px;
+      background: url('https://via.placeholder.com/1920x1080/1E3A8A/0A0A23?text=Tech+Flow') center/cover no-repeat;
+      opacity: 0.1;
       z-index: 0;
     }
 
-    .proyecto h3,
-    .proyecto p {
+    #proyectos h2 {
+      font-size: 2.8rem;
+      font-weight: 300;
+      color: #FFFFFF;
+      text-align: center;
+      margin-bottom: 2.5rem;
+      animation: fadeIn 1s ease-in;
       position: relative;
       z-index: 1;
     }
 
+    .proyectos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .proyecto {
+      background-color: rgba(10, 10, 35, 0.8);
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s;
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
+    }
+
+    .proyecto:nth-child(1) { animation-delay: 0.2s; }
+    .proyecto:nth-child(2) { animation-delay: 0.4s; }
+    .proyecto:nth-child(3) { animation-delay: 0.6s; }
+
+    .proyecto:hover {
+      transform: translateY(-10px);
+    }
+
     .proyecto h3 {
       color: #00BFFF;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
       font-weight: 400;
+      font-size: 1.3rem;
     }
 
     .proyecto p {
       color: #D0D0FF;
       font-weight: 200;
+      font-size: 0.9rem;
     }
 
     /* Sección Contacto */
     #contacto {
       padding: 10rem 3rem;
-      background: linear-gradient(135deg, #0A0A23, #1E3A8A),
-                  url('https://via.placeholder.com/1920x1080/0A0A23/1E3A8A?text=Minimal+Data+Flow') center/cover no-repeat;
-      background-blend-mode: overlay;
+      background: linear-gradient(135deg, #0A0A23, #1E3A8A);
       text-align: center;
       position: relative;
     }
 
+    #contacto::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://via.placeholder.com/1920x1080/0A0A23/1E3A8A?text=Data+Flow') center/cover no-repeat;
+      opacity: 0.1;
+      z-index: 0;
+    }
+
     #contacto h2 {
-      font-size: 3rem;
-      font-weight: 400;
+      font-size: 2.8rem;
+      font-weight: 300;
       color: #FFFFFF;
       margin-bottom: 2.5rem;
       animation: fadeIn 1s ease-in;
+      position: relative;
+      z-index: 1;
     }
 
     .contacto-form {
-      max-width: 800px;
+      max-width: 700px;
       margin: 0 auto;
     }
 
     .contacto-form input,
     .contacto-form textarea {
       width: 100%;
-      padding: 1.2rem;
+      padding: 1rem;
       margin-bottom: 1.5rem;
       border: 1px solid #1E90FF;
       border-radius: 8px;
       background-color: rgba(30, 58, 138, 0.7);
       color: #FFFFFF;
       font-size: 1rem;
-      font-weight: 300;
+      font-weight: 200;
       transition: border-color 0.3s;
     }
 
@@ -542,11 +552,11 @@
       background-color: transparent;
       border: 2px solid #00BFFF;
       color: #00BFFF;
-      padding: 1.2rem 3rem;
+      padding: 1rem 2.5rem;
       border-radius: 50px;
       cursor: pointer;
       font-weight: 400;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       transition: all 0.3s;
       position: relative;
       overflow: hidden;
@@ -578,13 +588,14 @@
     }
 
     .contacto-info {
-      margin-top: 3rem;
+      margin-top: 2rem;
     }
 
     .contacto-info p {
-      margin: 1rem 0;
+      margin: 0.8rem 0;
       font-weight: 200;
       color: #D0D0FF;
+      font-size: 0.9rem;
     }
 
     .contacto-info a {
@@ -600,32 +611,44 @@
     /* Sección Blog */
     #blog {
       padding: 10rem 3rem;
-      background: linear-gradient(135deg, #1E3A8A, #0A0A23),
-                  url('https://via.placeholder.com/1920x1080/1E3A8A/0A0A23?text=Subtle+AI+Nodes') center/cover no-repeat;
-      background-blend-mode: overlay;
+      background: linear-gradient(135deg, #1E3A8A, #0A0A23);
       position: relative;
     }
 
+    #blog::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://via.placeholder.com/1920x1080/1E3A8A/0A0A23?text=AI+Nodes') center/cover no-repeat;
+      opacity: 0.1;
+      z-index: 0;
+    }
+
     #blog h2 {
-      font-size: 3rem;
-      font-weight: 400;
+      font-size: 2.8rem;
+      font-weight: 300;
       color: #FFFFFF;
       text-align: center;
       margin-bottom: 2.5rem;
       animation: fadeIn 1s ease-in;
+      position: relative;
+      z-index: 1;
     }
 
     .blog-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 3rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
       max-width: 1200px;
       margin: 0 auto;
     }
 
     .blog-post {
       background-color: rgba(10, 10, 35, 0.8);
-      padding: 2.5rem;
+      padding: 2rem;
       border-radius: 12px;
       text-align: center;
       transition: transform 0.3s;
@@ -641,15 +664,24 @@
       transform: translateY(-10px);
     }
 
-    .blog-post h3 {
+    .blog-post a {
       color: #00BFFF;
-      margin-bottom: 1rem;
+      text-decoration: none;
       font-weight: 400;
+      font-size: 1.3rem;
+      display: block;
+      margin-bottom: 0.8rem;
+      transition: color 0.3s;
+    }
+
+    .blog-post a:hover {
+      color: #1E90FF;
     }
 
     .blog-post p {
       color: #D0D0FF;
       font-weight: 200;
+      font-size: 0.9rem;
     }
 
     /* Footer */
@@ -659,6 +691,7 @@
       padding: 2rem;
       color: #A0A0C0;
       font-weight: 200;
+      font-size: 0.9rem;
     }
 
     /* Parallax */
@@ -671,15 +704,19 @@
     /* Responsividad */
     @media (max-width: 768px) {
       #inicio h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
       }
 
       #inicio p {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
 
       .slide h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+      }
+
+      .slide p {
+        font-size: 1rem;
       }
 
       nav ul {
@@ -688,7 +725,7 @@
       }
 
       #acerca h2, #servicios h2, #proyectos h2, #contacto h2, #blog h2 {
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
 
       .contacto-form {
@@ -702,6 +739,10 @@
 
       section {
         background-attachment: scroll;
+      }
+
+      .servicio, .proyecto, .valor, .blog-post {
+        padding: 1.5rem;
       }
     }
   </style>
@@ -773,15 +814,15 @@
     <div class="servicios-grid">
       <div class="servicio">
         <h3>Consultoría en Ciberseguridad</h3>
-        <p>Protegemos tus activos digitales con estrategias avanzadas y personalizadas.</p>
+        <p>Protegemos tus activos digitales con estrategias avanzadas.</p>
       </div>
       <div class="servicio">
         <h3>Implementación de IA</h3>
-        <p>Desarrollamos soluciones de inteligencia artificial para optimizar procesos y decisiones.</p>
+        <p>Soluciones de inteligencia artificial para optimizar procesos.</p>
       </div>
       <div class="servicio">
         <h3>Soluciones Tecnológicas</h3>
-        <p>Integración de sistemas OT e IT para maximizar la eficiencia operativa.</p>
+        <p>Integración de sistemas OT e IT para máxima eficiencia.</p>
       </div>
     </div>
   </section>
@@ -792,15 +833,15 @@
     <div class="proyectos-grid">
       <div class="proyecto">
         <h3>Ciberseguridad Industrial</h3>
-        <p>Implementamos un sistema de seguridad avanzado, reduciendo riesgos en un 80%.</p>
+        <p>Sistema de seguridad avanzado, reduciendo riesgos en un 80%.</p>
       </div>
       <div class="proyecto">
         <h3>Automatización con IA</h3>
-        <p>Optimizamos la logística de un cliente con IA, mejorando la eficiencia en un 30%.</p>
+        <p>Optimizamos logística con IA, mejorando eficiencia en un 30%.</p>
       </div>
       <div class="proyecto">
         <h3>Integración OT-IT</h3>
-        <p>Conectamos sistemas operativos y tecnológicos, aumentando la productividad.</p>
+        <p>Conexión de sistemas para aumentar la productividad.</p>
       </div>
     </div>
   </section>
@@ -811,7 +852,7 @@
     <div class="contacto-form">
       <input type="text" placeholder="Nombre" required>
       <input type="email" placeholder="Correo Electrónico" required>
-      <textarea placeholder="Tu Mensaje" rows="6" required></textarea>
+      <textarea placeholder="Tu Mensaje" rows="5" required></textarea>
       <button onclick="enviarMensaje()">Enviar Mensaje</button>
     </div>
     <div class="contacto-info">
@@ -830,16 +871,16 @@
     <h2>Nuestro Blog</h2>
     <div class="blog-grid">
       <div class="blog-post">
-        <h3>El Futuro de la Ciberseguridad</h3>
-        <p>Descubre cómo proteger tus sistemas en un mundo hiperconectado.</p>
+        <a href="https://example.com/blog/futuro-ciberseguridad">El Futuro de la Ciberseguridad</a>
+        <p>Cómo proteger sistemas en un mundo hiperconectado.</p>
       </div>
       <div class="blog-post">
-        <h3>IA: Transformando Industrias</h3>
-        <p>Exploramos el impacto de la inteligencia artificial en los negocios.</p>
+        <a href="https://example.com/blog/ia-transformando-industrias">IA: Transformando Industrias</a>
+        <p>Impacto de la inteligencia artificial en los negocios.</p>
       </div>
       <div class="blog-post">
-        <h3>Conexión OT-IT</h3>
-        <p>Claves para una integración exitosa de sistemas operativos y tecnológicos.</p>
+        <a href="https://example.com/blog/conexion-ot-it">Conexión OT-IT</a>
+        <p>Claves para integrar sistemas operativos y tecnológicos.</p>
       </div>
     </div>
   </section>
@@ -898,7 +939,7 @@
     canvas.height = window.innerHeight;
 
     const particlesArray = [];
-    const numberOfParticles = 20; // Muy reducido para sutileza
+    const numberOfParticles = 6; // Reducido para no competir con la imagen
 
     class Particle {
       constructor() {
@@ -918,7 +959,7 @@
       }
 
       draw() {
-        ctx.fillStyle = 'rgba(0, 191, 255, 0.4)';
+        ctx.fillStyle = 'rgba(0, 191, 255, 0.3)';
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
